@@ -1,10 +1,10 @@
 import Sidewall from '../components/Sidewall.jsx'
 import { BookingForm, PageHero, SectionHead, Marquee, CallButtons } from '../components/Common.jsx'
 import Reveal from '../components/Reveal.jsx'
-import { tyreBrands, carBrands } from '../data/site.js'
+import { tyreBrands, carBrands, gallery } from '../data/site.js'
 export default function Brands() {
   return (<>
-    <PageHero eyebrow="Brands" title="Tyre brands we deal with" sub="Send your car model and tyre size — we’ll check availability for you." />
+    <PageHero eyebrow="Brands" title="Tyre brands we deal with" sub="Send your car model and tyre size — we’ll check availability for you." image={gallery[1].image} imageAlt={gallery[1].alt} />
     <section className="section"><div className="wrap">
       <div className="grid4">{tyreBrands.map((b, i) => <Reveal key={b} delay={(i % 4) * 60} className="brand-tile">{b}</Reveal>)}</div>
     </div></section>

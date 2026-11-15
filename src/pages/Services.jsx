@@ -1,9 +1,9 @@
 import { PageHero, ServiceCard, SectionHead, FAQ, CallButtons } from '../components/Common.jsx'
 import Reveal from '../components/Reveal.jsx'
-import { services, extras, servicesFaqs } from '../data/site.js'
+import { services, extras, servicesFaqs, gallery } from '../data/site.js'
 export default function Services() {
   return (<>
-    <PageHero eyebrow="Services" title="Tyre services that come to you" sub="From everyday tyre changes to emergency puncture repair — all starting from AED 150." />
+    <PageHero eyebrow="Services" title="Tyre services that come to you" sub="From everyday tyre changes to emergency puncture repair — all starting from AED 150." image={gallery[0].image} imageAlt={gallery[0].alt} />
     <section className="section"><div className="wrap"><div className="grid3">{services.map((s, i) => <ServiceCard key={s.slug} s={s} i={i} />)}</div></div></section>
     <section className="section dark"><div className="wrap"><SectionHead eyebrow="Also Included" title="Every visit can include" />
       <div className="grid4">{extras.map((e, i) => <Reveal key={e} delay={i * 80} className="card mini"><h3>{e}</h3><b>From AED 150</b></Reveal>)}</div></div></section>

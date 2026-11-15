@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Tracker from '../components/Tracker.jsx'
-import Tyre from '../components/Tyre.jsx'
 import Team from '../components/Team.jsx'
 import WhyChoose from '../components/WhyChoose.jsx'
 import Reveal from '../components/Reveal.jsx'
@@ -32,7 +31,7 @@ export default function Home() {
 
     <section className="section"><div className="wrap">
       <SectionHead eyebrow="Our Work" title="Out on the road, every day" />
-      <div className="grid3">{gallery.slice(0, 3).map((g, i) => <Reveal key={g.t} delay={i * 80}><Link to="/gallery" className="tile" style={{ '--h': 120 }}><Tyre size={150} spin={false} /><span className="cap"><small>{g.c}</small>{g.t}</span></Link></Reveal>)}</div>
+      <div className="grid3">{gallery.slice(0, 3).map((g, i) => <Reveal key={g.t} delay={i * 80}><Link to="/gallery" className="tile" style={{ '--h': 120 }}><img src={g.image} alt={g.alt} loading="lazy" decoding="async" /><span className="cap"><small>{g.c}</small>{g.t}</span></Link></Reveal>)}</div>
       <div className="center-block" style={{ marginTop: 40 }}><Link to="/gallery" className="btn ghost">Open the gallery →</Link></div>
     </div></section>
 

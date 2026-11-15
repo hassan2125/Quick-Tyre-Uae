@@ -15,8 +15,11 @@ export const CallButtons = ({ msg }) => (
     <a className="btn ghost" href={`tel:${site.tel}`}>📞 {site.phone}</a>
   </div>)
 
-export const PageHero = ({ eyebrow, title, sub }) => (
-  <section className="page-hero"><div className="wrap"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1>{sub && <p>{sub}</p>}</div></section>)
+export const PageHero = ({ eyebrow, title, sub, image, imageAlt }) => (
+  <section className={`page-hero ${image ? 'has-photo' : ''}`}>
+    {image && <img className="page-hero-photo" src={image} alt={imageAlt || ''} fetchpriority="high" />}
+    <div className="wrap"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1>{sub && <p>{sub}</p>}</div>
+  </section>)
 
 export const ServiceCard = ({ s, i = 0 }) => (
   <Reveal delay={i * 70}>

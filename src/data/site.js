@@ -87,9 +87,10 @@ export const serviceFaqs = {
  ],
 }
 export const gallery = [
- {c:'Mobile Service',t:'Mobile tyre change at home',h:48},{c:'Roadside',t:'Roadside flat tyre assistance',h:30},{c:'Tyre Fitting',t:'Professional tyre fitting',h:200},
- {c:'Mobile Service',t:'Our service van on call',h:340},{c:'Inspection',t:'Pressure & condition check',h:120},{c:'Roadside',t:'Emergency tyre change',h:8},
- {c:'Tyre Fitting',t:'Luxury vehicle tyre replacement',h:280},{c:'Inspection',t:'Wear & damage inspection',h:170},{c:'Mobile Service',t:'Workplace tyre service',h:90}]
+ {c:'Tyre Fitting',t:'Technician working on a vehicle wheel',image:'/images/wheel-service.jpg',alt:'Representative stock photo of a technician aligning a vehicle wheel in a tyre workshop',h:48},
+ {c:'Tyre Inspection',t:'Close-up of a vehicle wheel and tyre',image:'/images/wheel-detail.jpg',alt:'Representative stock photo showing a close-up of a vehicle tyre and alloy wheel',h:30},
+ {c:'Garage Support',t:'Car raised for wheel service',image:'/images/garage-service.jpg',alt:'Representative stock photo of a car raised in a workshop for wheel service',h:200},
+]
 export const whyUs = [
  {k:'10–15',u:'min',t:'Average arrival time',d:'Our mobile vans are dispatched fast so you are not stuck waiting at the roadside.',big:true},
  {k:'24/7',t:'Roadside assistance',d:'Day, night, weekends — call or WhatsApp anytime.'},

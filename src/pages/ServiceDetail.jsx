@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { FAQ, PageHero, CallButtons, BookingForm, SectionHead, ServiceCard, ReviewCarousel } from '../components/Common.jsx'
 import WhyChoose from '../components/WhyChoose.jsx'
 import Reveal from '../components/Reveal.jsx'
-import WorkGallery from '../components/WorkGallery.jsx'
+import WorkGallery, { getServicePhoto } from '../components/WorkGallery.jsx'
 import { services, steps, serviceFaqs, whyUs, areas, reviews } from '../data/site.js'
 import NotFound from './NotFound.jsx'
 const common = ['Visit from a trained technician', 'Inspection of tyre & visible damage', 'Repair or replacement based on condition', 'Price confirmed before work starts']
@@ -10,9 +10,10 @@ export default function ServiceDetail() {
   const idx = services.findIndex(x => x.slug === useParams().slug)
   if (idx < 0) return <NotFound />
   const s = services[idx]
+  const servicePhoto = getServicePhoto(s.slug)
   const related = services.filter(x => x.slug !== s.slug).slice(0, 3)
   return (<>
-    <PageHero eyebrow={`${s.icon} Service`} title={s.title} sub={s.short} />
+    <PageHero eyebrow={`${s.icon} Service`} title={s.title} sub={s.short} image={servicePhoto.image} imageAlt={servicePhoto.alt} />
 
     <section className="section"><div className="wrap split">
       <Reveal><span className="eyebrow">Service Overview</span><h2>About {s.title.toLowerCase()}</h2>
