@@ -1,15 +1,14 @@
-// Business content sourced from quicktyresuae.com
-export const site = { name:'Quick Tyres UAE', phone:'050 312 5302', tel:'+971503125302', wa:'971503125302',
-  email:'info@quicktyresuae.com', address:'F-124, England Cluster, International City, Dubai, UAE', hours:'08:00 AM – 11:00 PM' }
+export const site = { name:'Rapid Tyre Repair Dubai', phone:'050 312 5302', tel:'+971503125302', wa:'971503125302',
+  email:'info@rapidtyrerepairdubai.com', address:'Al Quoz 2, Dubai', hours:'08:00 AM – 11:00 PM' }
 export const waLink = (t='Hi, I need tyre change service.') => `https://wa.me/${site.wa}?text=${encodeURIComponent(t)}`
 export const stats = [{v:'24/7',l:'Roadside assistance'},{v:'10–15',l:'Min average arrival'},{v:'6,000+',l:'Customers across Dubai'},{v:'4.7★',l:'3,000+ Google reviews'}]
 export const services = [
- {slug:'mobile-tyre-change',icon:'🛞',title:'Mobile Tyre Change at Home',short:'We change your tyres at your home, workplace or any suitable location in Dubai.',long:'Skip the garage queue. Share your location, car model and tyre size, and our technician arrives equipped to change your tyres on the spot.',points:['At home, office or roadside','Fitting for compatible tyres','Share location & tyre size','Book by call or WhatsApp']},
- {slug:'emergency-tyre-change',icon:'🚨',title:'Emergency Tyre Change',short:'Stranded with a damaged tyre? Our team reaches you fast, day or night.',long:'When a tyre fails on the road every minute counts. Our emergency team is on call 24/7 with an average arrival of 10–15 minutes.',points:['24/7 availability','10–15 min average arrival','Roadside support','Repair or replace on site']},
- {slug:'mobile-tyre-puncture-repair',icon:'🔧',title:'Mobile Tyre Puncture Repair',short:'Puncture fixed where you are, so you can keep driving.',long:'Our technicians inspect the damage and repair suitable punctures at your location. If a tyre cannot be repaired safely, we recommend a replacement.',points:['On-site puncture repair','Damage inspection first','Honest repair vs. replace advice','Back on the road quickly']},
- {slug:'mobile-flat-tyre-repair',icon:'💨',title:'Mobile Flat Tyre Repair',short:'Flat tyre assistance with repair or replacement based on the damage.',long:'A flat doesn’t have to ruin your day. We assess the tyre and fix or replace it on the spot.',points:['Flat tyre assessment','Repair or replacement','Jack & tools provided','Home, work or roadside']},
- {slug:'emergency-tyre-puncture-repair',icon:'⚡',title:'Emergency Tyre Puncture Repair',short:'Urgent puncture? Priority dispatch to get you moving again.',long:'For urgent punctures — late nights, weekends, busy roads — our emergency puncture team prioritises your call.',points:['Priority response','Weekend & evening help','Fast on-site fix','Free pick & drop if garage needed']},
- {slug:'mobile-tyre-change-replacement',icon:'🛠️',title:'Tyre Change & Replacement',short:'Replace worn or damaged tyres with suitable options for your vehicle.',long:'Send us your car model and tyre size and we’ll help check suitable replacement options and availability.',points:['Worn or damaged tyre replacement','Leading tyre brands','Tyre inspection','Pay online option']},
+ {slug:'mobile-tyre-change',icon:'tyre',title:'Mobile Tyre Change at Home',short:'We change your tyres at your home, workplace or any suitable location in Dubai.',long:'Skip the garage queue. Share your location, car model and tyre size, and our technician arrives equipped to change your tyres on the spot.',points:['At home, office or roadside','Fitting for compatible tyres','Share location & tyre size','Book by call or WhatsApp']},
+ {slug:'emergency-tyre-change',icon:'alert',title:'Emergency Tyre Change',short:'Stranded with a damaged tyre? Our team reaches you fast, day or night.',long:'When a tyre fails on the road every minute counts. Our emergency team is on call 24/7 with an average arrival of 10–15 minutes.',points:['24/7 availability','10–15 min average arrival','Roadside support','Repair or replace on site']},
+ {slug:'mobile-tyre-puncture-repair',icon:'wrench',title:'Mobile Tyre Puncture Repair',short:'Puncture fixed where you are, so you can keep driving.',long:'Our technicians inspect the damage and repair suitable punctures at your location. If a tyre cannot be repaired safely, we recommend a replacement.',points:['On-site puncture repair','Damage inspection first','Honest repair vs. replace advice','Back on the road quickly']},
+ {slug:'mobile-flat-tyre-repair',icon:'pressure',title:'Mobile Flat Tyre Repair',short:'Flat tyre assistance with repair or replacement based on the damage.',long:'A flat doesn’t have to ruin your day. We assess the tyre and fix or replace it on the spot.',points:['Flat tyre assessment','Repair or replacement','Jack & tools provided','Home, work or roadside']},
+ {slug:'emergency-tyre-puncture-repair',icon:'bolt',title:'Emergency Tyre Puncture Repair',short:'Urgent puncture? Priority dispatch to get you moving again.',long:'For urgent punctures — late nights, weekends, busy roads — our emergency puncture team prioritises your call.',points:['Priority response','Weekend & evening help','Fast on-site fix','Free pick & drop if garage needed']},
+ {slug:'mobile-tyre-change-replacement',icon:'replace',title:'Tyre Change & Replacement',short:'Replace worn or damaged tyres with suitable options for your vehicle.',long:'Send us your car model and tyre size and we’ll help check suitable replacement options and availability.',points:['Worn or damaged tyre replacement','Leading tyre brands','Tyre inspection','Pay online option']},
 ]
 export const extras = ['Tyre Fitting','Flat Tyre Assistance','Roadside Tyre Change','Tyre Inspection']
 export const steps = [{t:'Request Assistance',d:'Call or chat with us on WhatsApp and share your location.'},{t:'We’re On Our Way',d:'Our technicians reach you quickly, equipped and ready.'},{t:'We Fix It On-Site',d:'Puncture repaired or tyre replaced. You’re back on the road!'}]
@@ -18,7 +17,7 @@ export const carBrands = ['Lamborghini','Maserati','Lexus','MG','Mercedes-Benz',
 export const areas = ['Dubai Marina','JBR','Palm Jumeirah','JLT','Emirates Hills','Greens Views','Barsha Heights','Media City','Internet City','Knowledge Village','Dubai Hills','JVC','JVT','Motor City','Al Sufouh','Arabian Ranches','Al Barari','Festival City','Creek Harbour','Golf City','Remraam','Damac Hills','Downtown Dubai']
 export const reviews = [
  {n:'Muneez Kari',t:'Amazing experience. Expert workmanship, excellent customer care and reliable after-sales support.'},
- {n:'Sven Massenhove',t:'Quick Tyres UAE fixed what others couldn’t! Professional team, outstanding service at the best rates in Dubai.'},
+ {n:'Sven Massenhove',t:'Rapid Tyre Repair Dubai fixed what others couldn’t! Professional team, outstanding service at the best rates in Dubai.'},
  {n:'Georgina Deeb',t:'Super fast! I had a flat tyre on a Sunday evening and they responded immediately.'}]
 export const team = [['Faisal Khan','Tyre Mechanic'],['Arjun Kumar','Tyre Fitting Expert'],['Omar Khalid','Puncture Repair Technician'],['Mohsin Ali','Mobile Tyre Specialist'],['Arif Rahman','Wheel Balancing Technician'],['Mike','Emergency Tyre Technician']]
 export const homeFaqs = [
@@ -38,7 +37,7 @@ export const servicesFaqs = [
 export const contactFaqs = [
  ['What is the quickest way to request a call-out?','Call or message us on WhatsApp with your current location and tyre issue.'],
  ['What details do you need to confirm a booking?','Please share your location, car make and model, tyre size if known, and whether the tyre is flat, damaged or needs replacement.'],
- ['How do I find the garage?','The garage address is F-124, England Cluster, International City, Dubai. Use the map link on this page for directions.'],
+ ['How do I find the garage?',`The garage is located in ${site.address}. Use the map link on this page for directions.`],
  ['When are you open?','The listed hours are 08:00 AM–11:00 PM. Roadside assistance is advertised as 24/7; contact us to confirm availability.'],
  ['When will I know the price?','Share your service needs and vehicle details. We confirm availability and price with you before starting work.'],
 ]
@@ -99,5 +98,5 @@ export const whyUs = [
  {k:'FREE',t:'Pick & drop',d:'For garage tyre repair, fitting and replacement bookings.'},
  {k:'AED',t:'Pay online',d:'Simple payment once the service and price are agreed.'},
 ]
-export const signs = [['⚠️','Visible damage or bulges'],['📉','Worn-down tread'],['📳','Vibration while driving'],['💨','Pressure that keeps dropping'],['☀️','Cracks or ageing from Dubai heat'],['🔩','Nails, screws or sidewall cuts']]
+export const signs = [['damage','Visible damage or bulges'],['trend','Worn-down tread'],['vibration','Vibration while driving'],['pressure','Pressure that keeps dropping'],['sun','Cracks or ageing from Dubai heat'],['wrench','Nails, screws or sidewall cuts']]
 export const sidewall = [['225','Section width','Width of the tyre in millimetres.'],['45','Aspect ratio','Sidewall height as a % of the width.'],['R','Construction','R means radial construction — the standard for cars.'],['17','Rim diameter','The wheel size the tyre fits, in inches.'],['94','Load index','The maximum load each tyre can carry.'],['W','Speed rating','The maximum speed the tyre is rated for.']]

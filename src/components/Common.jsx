@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { site, waLink, services, areas } from '../data/site.js'
 import Reveal from './Reveal.jsx'
 import { ServiceIllustration } from './WorkGallery.jsx'
+import Icon from './Icon.jsx'
 
 export const SectionHead = ({ eyebrow, title, sub, center }) => (
   <Reveal className={`sec-head ${center ? 'center' : ''}`}>
@@ -11,8 +12,8 @@ export const SectionHead = ({ eyebrow, title, sub, center }) => (
 
 export const CallButtons = ({ msg }) => (
   <div className="btn-row">
-    <a className="btn primary" href={waLink(msg)} target="_blank" rel="noreferrer">Book a Service</a>
-    <a className="btn ghost" href={`tel:${site.tel}`}>📞 {site.phone}</a>
+    <a className="btn primary" href={waLink(msg)} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={18} /> Book Tyre Repair</a>
+    <a className="btn ghost" href={`tel:${site.tel}`}><Icon name="phone" size={18} /> {site.phone}</a>
   </div>)
 
 export const PageHero = ({ eyebrow, title, sub, image, imageAlt }) => (
@@ -24,7 +25,7 @@ export const PageHero = ({ eyebrow, title, sub, image, imageAlt }) => (
 export const ServiceCard = ({ s, i = 0 }) => (
   <Reveal delay={i * 70}>
     <Link to={`/services/${s.slug}`} className="card service-card">
-      <div className="service-visual"><ServiceIllustration slug={s.slug} title={s.title} /><span>{s.icon}</span></div>
+      <div className="service-visual"><ServiceIllustration slug={s.slug} title={s.title} /></div>
       <div className="service-card-body"><h3>{s.title}</h3><p>{s.short}</p>
         <div className="card-foot"><b>From AED 150</b><span className="arrow">→</span></div>
       </div>

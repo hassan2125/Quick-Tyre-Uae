@@ -3,6 +3,7 @@ import { Component, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { site, waLink, services } from '../data/site.js'
 import { CTABand } from './Common.jsx'
+import Icon from './Icon.jsx'
 
 class Boundary extends Component {
   state = { err: false }
@@ -15,21 +16,21 @@ export default function Layout() {
   const [dd, setDd] = useState(false)
   const close = () => { setOpen(false); setDd(false) }
   return (<>
-    <div id="top" className="topbar">⚡ Fast Fix Tyre <b>40% OFF</b> Today in Dubai — Call Now! <a href={`tel:${site.tel}`}>{site.phone}</a></div>
+    <div id="top" className="topbar"><Icon name="bolt" size={15} /> Fast Fix Tyre <b>40% OFF</b> Today in Dubai — Call Now! <a href={`tel:${site.tel}`}>{site.phone}</a></div>
     <header className="header"><div className="wrap bar">
-      <Link to="/" className="logo" onClick={() => setOpen(false)}><span className="logo-mark" />QUICK<b>TYRES</b><small>UAE</small></Link>
+      <Link to="/" className="logo" onClick={() => setOpen(false)}><img src="/images/Logo/Main_Logo-%20updated.png" alt="Rapid Tyre Repair Dubai" /></Link>
       <nav className={open ? 'open' : ''}>
         {links.map(([to, l]) => to === '/services' ? (
           <div key={to} className={`dd ${dd ? 'open' : ''}`} onMouseLeave={() => setDd(false)}>
             <NavLink to={to} onClick={close}>{l}</NavLink>
             <button className="dd-caret" aria-label="Show services" aria-expanded={dd} onClick={() => setDd(!dd)}>▾</button>
             <div className="dd-panel"><div className="dd-grid">
-              {services.map(s => <Link key={s.slug} to={`/services/${s.slug}`} onClick={close}><span>{s.icon}</span><div><b>{s.title}</b><small>From AED 150</small></div></Link>)}
+              {services.map(s => <Link key={s.slug} to={`/services/${s.slug}`} onClick={close}><span><Icon name={s.icon} size={20} /></span><div><b>{s.title}</b><small>From AED 150</small></div></Link>)}
             </div><Link to="/services" className="dd-all" onClick={close}><span className="dd-all-copy">View all services<small>Explore all 6 mobile tyre services</small></span><b aria-hidden="true">→</b></Link></div>
           </div>) : <NavLink key={to} to={to} end={to === '/'} onClick={close}>{l}</NavLink>)}
         <div className="header-actions">
-          <a className="btn ghost header-call" href={`tel:${site.tel}`}>📞 {site.phone}</a>
-          <a className="btn primary header-book" href={waLink()} target="_blank" rel="noreferrer">Book a Service</a>
+          <a className="btn ghost header-call" href={`tel:${site.tel}`}><Icon name="phone" size={17} /> {site.phone}</a>
+          <a className="btn primary header-book" href={waLink()} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={18} /> Book Tyre Repair</a>
         </div>
       </nav>
       <button className="burger" onClick={() => setOpen(!open)} aria-label="Menu"><span /><span /><span /></button>
@@ -37,7 +38,7 @@ export default function Layout() {
     <main><Boundary key={useLocation().pathname}><Outlet /></Boundary></main>
     <CTABand />
     <footer className="footer"><div className="wrap grid">
-      <div><Link to="/" className="logo">QUICK<b>TYRES</b><small>UAE</small></Link>
+      <div><Link to="/" className="logo"><img src="/images/Logo/Main_Logo-%20updated.png" alt="Rapid Tyre Repair Dubai" /></Link>
         <p>Driving safety and performance: expert tyre repair and replacement, brought to you.</p>
         <div className="footer-socials" aria-label="Social media">
           <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
@@ -56,9 +57,9 @@ export default function Layout() {
       <div><h4>Services</h4>{services.map(s => <Link key={s.slug} to={`/services/${s.slug}`}>{s.title}</Link>)}</div>
       <div><h4>Explore</h4>{links.map(([to, l]) => <Link key={to} to={to}>{l}</Link>)}</div>
       <div><h4>Contact</h4><p>{site.address}</p><a href={`tel:${site.tel}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><p>Timing: {site.hours}</p></div>
-    </div><div className="wrap copy">© 2026 Quick Tyre UAE. All rights reserved.</div></footer>
+    </div><div className="wrap copy">© 2026 Rapid Tyre Repair Dubai. All rights reserved.</div></footer>
     <div className="float-cta">
-      <a href={`tel:${site.tel}`} aria-label="Call">📞</a>
+      <a href={`tel:${site.tel}`} aria-label="Call"><Icon name="phone" size={22} /></a>
       <a className="wa" href={waLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp">
         <svg viewBox="0 0 32 32" aria-hidden="true">
           <path d="M16 3.5a12 12 0 0 0-10.2 18.3L4.5 28l6.4-1.3A12 12 0 1 0 16 3.5Z" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinejoin="round" />

@@ -25,7 +25,7 @@ export default function WorkGallery({ offset = 0 }) {
     <div className="work-grid">{list.map((item, i) => (
       <Reveal key={item.t} delay={i * 70}><button className="work-card" onClick={() => setLb(item)} aria-label={item.t}>
         <img src={item.image} alt={item.alt} loading="lazy" decoding="async" /><span className="cap"><small>{item.c}</small>{item.t}</span></button></Reveal>))}</div>
-    <p className="work-note">Representative stock photos, not photos of Quick Tyres customer jobs.</p>
+    <p className="work-note">Representative stock photos, not photos of Rapid Tyre Repair Dubai customer jobs.</p>
     {lb && <div className="lightbox" onClick={() => setLb(null)}><div className="lb-card"><img src={lb.image} alt={lb.alt} /><h3>{lb.t}</h3><p>Tap anywhere to close</p></div></div>}
   </>)
 }

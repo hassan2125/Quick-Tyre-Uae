@@ -1,6 +1,6 @@
-# Quick Tyres UAE — Vite + React website
+# Rapid Tyre Repair Dubai — Vite + React website
 
-Multi-page website for **Quick Tyres UAE** (mobile tyre change, puncture repair & emergency roadside tyre service in Dubai).
+Multi-page website for **Rapid Tyre Repair Dubai** (mobile tyre change, puncture repair & emergency roadside tyre service in Dubai).
 
 ## Run it
 ```bash
@@ -50,7 +50,7 @@ Almost everything (phone, WhatsApp, address, services, prices, brands, areas, re
 - **Google Map:** `MapEmbed.jsx` loads the live embed on click; set `live` to `true` initially for production.
 - **Quote form:** opens a pre-filled WhatsApp message; connect a backend/email service if you want form submissions.
 - **SEO:** add per-page titles/meta (e.g. react-helmet-async) and a sitemap.
-- Content was taken from quicktyresuae.com; some copy (e.g. "Free tyre inspection advice", team roles) is adapted — review it.
+- Review any retained service copy and team details before production launch.
 
 ## Deploying
 Single-page app using `BrowserRouter`: host must rewrite all routes to `index.html`. Included: `vercel.json` (Vercel) and `public/_redirects` (Netlify).

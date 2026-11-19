@@ -7,7 +7,7 @@ export default function Gallery() {
   const [c, setC] = useState('All'); const [lb, setLb] = useState(null)
   const list = gallery.filter(g => c === 'All' || g.c === c)
   return (<>
-    <PageHero eyebrow="Gallery" title="Tyre service gallery" sub="Representative stock photos of wheel fitting and tyre service. These are not photos of Quick Tyres customer jobs." image={gallery[0].image} imageAlt={gallery[0].alt} />
+    <PageHero eyebrow="Gallery" title="Tyre service gallery" sub="Representative stock photos of wheel fitting and tyre service. These are not photos of Rapid Tyre Repair Dubai customer jobs." image={gallery[0].image} imageAlt={gallery[0].alt} />
     <section className="section"><div className="wrap">
       <div className="filters">{cats.map(x => <button key={x} className={x === c ? 'on' : ''} onClick={() => setC(x)}>{x}</button>)}</div>
       <div className="masonry">{list.map((g, i) => (

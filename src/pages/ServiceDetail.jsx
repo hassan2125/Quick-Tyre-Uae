@@ -5,6 +5,7 @@ import Reveal from '../components/Reveal.jsx'
 import WorkGallery, { getServicePhoto } from '../components/WorkGallery.jsx'
 import { services, steps, serviceFaqs, whyUs, areas, reviews } from '../data/site.js'
 import NotFound from './NotFound.jsx'
+import Icon from '../components/Icon.jsx'
 const common = ['Visit from a trained technician', 'Inspection of tyre & visible damage', 'Repair or replacement based on condition', 'Price confirmed before work starts']
 export default function ServiceDetail() {
   const idx = services.findIndex(x => x.slug === useParams().slug)
@@ -13,7 +14,7 @@ export default function ServiceDetail() {
   const servicePhoto = getServicePhoto(s.slug)
   const related = services.filter(x => x.slug !== s.slug).slice(0, 3)
   return (<>
-    <PageHero eyebrow={`${s.icon} Service`} title={s.title} sub={s.short} image={servicePhoto.image} imageAlt={servicePhoto.alt} />
+    <PageHero eyebrow="Mobile Service" title={s.title} sub={s.short} image={servicePhoto.image} imageAlt={servicePhoto.alt} />
 
     <section className="section"><div className="wrap split">
       <Reveal><span className="eyebrow">Service Overview</span><h2>About {s.title.toLowerCase()}</h2>
@@ -44,7 +45,7 @@ export default function ServiceDetail() {
 
     <section className="section dark"><div className="wrap">
       <SectionHead eyebrow="Coverage" title="We serve these areas across Dubai" />
-      <Reveal className="chips">{areas.map(a => <span key={a}>📍 {a}</span>)}</Reveal>
+      <Reveal className="chips">{areas.map(a => <span key={a}><Icon name="location" size={15} /> {a}</span>)}</Reveal>
     </div></section>
 
     <section className="section"><div className="wrap">

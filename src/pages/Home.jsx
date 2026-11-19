@@ -5,17 +5,22 @@ import WhyChoose from '../components/WhyChoose.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { SectionHead, CallButtons, ServiceCard, Marquee, FAQ, BookingForm, ReviewCarousel } from '../components/Common.jsx'
 import { gallery, whyUs, signs, stats, services, steps, tyreBrands, areas, reviews, homeFaqs } from '../data/site.js'
+import Icon from '../components/Icon.jsx'
 
 export default function Home() {
   return (<>
     <section className="hero"><div className="wrap hero-grid">
-      <div>
+      <div className="hero-copy">
         <span className="pill"><i /> 24/7 Roadside Tyre Assistance · ★ 4.7 on Google</span>
-        <h1>Mobile Tyre Change <em>& Replacement</em> in Dubai</h1>
+        <h1 className="hero-heading"><span>Mobile Tyre Change</span><span><em>&amp; Replacement</em> in Dubai</span></h1>
         <p className="lead">Flat tyre? Worn tyres? We come to you — home, work or roadside — with mobile tyre fitting at your location.</p>
         <CallButtons />
         <div className="hero-stats">{stats.map(s => <div key={s.l}><b>{s.v}</b><span>{s.l}</span></div>)}</div>
       </div>
+    </div></section>
+
+    <section className="section job-card-section"><div className="wrap">
+      <SectionHead eyebrow="Live Service Status" title="Your technician is on the way" sub="Track the service from booking to completion." center />
       <Tracker />
     </div></section>
 
@@ -50,12 +55,12 @@ export default function Home() {
 
     <section className="section"><div className="wrap split">
       <div><SectionHead eyebrow="Tyre Health" title="Signs it’s time for a tyre check" sub="Spot any of these? Don’t wait for a breakdown — book an inspection and we’ll tell you honestly whether to repair or replace." /><CallButtons msg="Hi, I'd like a tyre inspection." /></div>
-      <div className="signs">{signs.map(([i, t], k) => <Reveal key={t} delay={k * 60} className="sign"><span>{i}</span>{t}</Reveal>)}</div>
+      <div className="signs">{signs.map(([i, t], k) => <Reveal key={t} delay={k * 60} className="sign"><span><Icon name={i} size={21} /></span>{t}</Reveal>)}</div>
     </div></section>
 
     <section className="section dark"><div className="wrap">
       <SectionHead eyebrow="Coverage" title="24/7 mobile tyre repair across Dubai" />
-      <Reveal className="chips">{areas.map(a => <span key={a}>📍 {a}</span>)}</Reveal>
+      <Reveal className="chips">{areas.map(a => <span key={a}><Icon name="location" size={15} /> {a}</span>)}</Reveal>
     </div></section>
 
     <section className="section"><div className="wrap"><Team link /></div></section>

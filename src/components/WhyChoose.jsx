@@ -1,11 +1,12 @@
 import Reveal from './Reveal.jsx'
 import { CallButtons, SectionHead } from './Common.jsx'
 import { whyUs } from '../data/site.js'
-const icons = ['⏱️', '🚨', '🛡️', '👥', '🚚', '💳']
+import Icon from './Icon.jsx'
+const icons = ['clock', 'alert', 'shield', 'users', 'truck', 'card']
 export default function WhyChoose({ alt }) {
   return (
     <section className={`section ${alt ? 'alt' : ''}`}><div className="wrap">
-      <SectionHead eyebrow="Why Choose Us" title="Why drivers pick Quick Tyres" />
+      <SectionHead eyebrow="Why Choose Us" title="Why drivers pick Rapid Tyre Repair Dubai" />
       <div className="why-grid">
         <Reveal className="why-panel">
           <div>
@@ -19,12 +20,12 @@ export default function WhyChoose({ alt }) {
         </Reveal>
         <div className="why-cards">{whyUs.slice(1).concat(whyUs[0]).filter(w => !w.big).map((w, i) => (
           <Reveal key={w.t} delay={i * 70} className="why-card">
-            <span className="why-ic">{icons[i + 1]}</span>
+            <span className="why-ic"><Icon name={icons[i + 1]} size={24} /></span>
             <div><h3>{w.t}</h3><p>{w.d}</p></div>
             <em>0{i + 1}</em>
           </Reveal>))}
           <Reveal delay={350} className="why-card hl">
-            <span className="why-ic">{icons[0]}</span>
+            <span className="why-ic"><Icon name={icons[0]} size={24} /></span>
             <div><h3>Free tyre inspection advice</h3><p>Not sure if you need repair or replacement? We’ll tell you honestly.</p></div>
             <em>06</em>
           </Reveal>
