@@ -4,7 +4,7 @@ import Team from '../components/Team.jsx'
 import WhyChoose from '../components/WhyChoose.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { SectionHead, CallButtons, ServiceCard, Marquee, FAQ, BookingForm, ReviewCarousel } from '../components/Common.jsx'
-import { gallery, whyUs, signs, stats, services, steps, tyreBrands, areas, reviews, homeFaqs } from '../data/site.js'
+import { gallery, whyUs, signs, stats, services, steps, tyreBrandMarquee, areas, reviews, homeFaqs } from '../data/site.js'
 import Icon from '../components/Icon.jsx'
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       <Tracker />
     </div></section>
 
-    <Marquee items={tyreBrands} to="/brands" />
+    <Marquee items={tyreBrandMarquee} to="/brands" />
 
     <section className="section"><div className="wrap">
       <SectionHead eyebrow="Our Services" title="Mobile tyre services, right where you are" />

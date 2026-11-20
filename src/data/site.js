@@ -13,6 +13,20 @@ export const services = [
 export const extras = ['Tyre Fitting','Flat Tyre Assistance','Roadside Tyre Change','Tyre Inspection']
 export const steps = [{t:'Request Assistance',d:'Call or chat with us on WhatsApp and share your location.'},{t:'We’re On Our Way',d:'Our technicians reach you quickly, equipped and ready.'},{t:'We Fix It On-Site',d:'Puncture repaired or tyre replaced. You’re back on the road!'}]
 export const tyreBrands = ['Bridgestone','Continental','Dunlop','Hankook','Michelin','Nexen','Nitto','Pirelli','Roadstone','Vredestein','Yokohama','Zeetex']
+export const tyreBrandMarquee = [
+ {name:'Bridgestone',image:'/images/Tyre%20Brands/bridgestone-logo.png'},
+ {name:'Continental',image:'/images/Tyre%20Brands/continental-logo.png'},
+ {name:'Dunlop',image:'/images/Tyre%20Brands/dunlop-logo.png'},
+ {name:'Hankook',image:'/images/Tyre%20Brands/hankook-logo.png'},
+ {name:'Michelin',image:'/images/Tyre%20Brands/michelin-logo.png'},
+ {name:'Nexen',image:'/images/Tyre%20Brands/nexen-logo.png'},
+ {name:'Nitto',image:'/images/Tyre%20Brands/nitto-logo.png'},
+ {name:'Pirelli',image:'/images/Tyre%20Brands/pirelli-logo.png'},
+ {name:'Roadstone',image:'/images/Tyre%20Brands/ROADSTONE.png'},
+ {name:'Vredestein',image:'/images/Tyre%20Brands/Vredestein-transparent.png'},
+ {name:'Yokohama',image:'/images/Tyre%20Brands/yokohama-logo.png'},
+ {name:'Zeetex',image:'/images/Tyre%20Brands/Zeetex-transparent.png'},
+]
 export const carBrands = ['Lamborghini','Maserati','Lexus','MG','Mercedes-Benz','Opel','Audi','Mitsubishi','BMW','Tesla','Ford','Porsche','Ferrari','Nissan','Jaguar','Jeep','Hyundai','GMC']
 export const areas = ['Dubai Marina','JBR','Palm Jumeirah','JLT','Emirates Hills','Greens Views','Barsha Heights','Media City','Internet City','Knowledge Village','Dubai Hills','JVC','JVT','Motor City','Al Sufouh','Arabian Ranches','Al Barari','Festival City','Creek Harbour','Golf City','Remraam','Damac Hills','Downtown Dubai']
 export const reviews = [

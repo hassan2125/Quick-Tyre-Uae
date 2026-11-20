@@ -108,7 +108,17 @@ export function ReviewCarousel({ reviews }) {
 }
 
 export const Marquee = ({ items, to }) => {
-  const m = <div className="marquee"><div className="track">{[...items, ...items].map((b, i) => <span key={i}>{b}</span>)}</div></div>
+  const renderItem = (item, i, duplicate = false) => {
+    const hasLogo = typeof item !== 'string'
+    const lightLogo = hasLogo && ['Vredestein', 'Zeetex'].includes(item.name)
+    return (
+      <span className={hasLogo ? 'brand-marquee-item' : ''} key={`${hasLogo ? item.name : item}-${i}`} aria-hidden={duplicate || undefined}>
+        {hasLogo ? <><img className={lightLogo ? 'brand-marquee-logo-light' : undefined} src={item.image} alt="" decoding="async" /><b className="brand-marquee-name">{item.name}</b></> : item}
+      </span>
+    )
+  }
+  const hasLogos = items.some(item => typeof item !== 'string')
+  const m = <div className={`marquee ${hasLogos ? 'logo-marquee' : ''}`}><div className="track">{items.map((item, i) => renderItem(item, i))}{items.map((item, i) => renderItem(item, i, true))}</div></div>
   return to ? <Link to={to} aria-label="View brands">{m}</Link> : m
 }
 
