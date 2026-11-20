@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Reveal from './Reveal.jsx'
-import { gallery } from '../data/site.js'
+import { gallery, services } from '../data/site.js'
 
 const serviceScenes = {
   'mobile-tyre-change': 0,
@@ -11,10 +11,14 @@ const serviceScenes = {
   'mobile-tyre-change-replacement': 0,
 }
 
-export const getServicePhoto = slug => gallery[serviceScenes[slug] ?? 0]
+export const getServicePhoto = slug => {
+  const service = services.find(item => item.slug === slug)
+  if (service?.image) return { image: service.image, alt: `${service.title} service`, c: 'Mobile Tyre Service', t: service.title }
+  return gallery[serviceScenes[slug] ?? 0]
+}
 
-export function ServiceIllustration({ slug, title }) {
-  const image = getServicePhoto(slug)
+export function ServiceIllustration({ slug, title, image: imageSrc }) {
+  const image = imageSrc ? { image: imageSrc, alt: `${title} service` } : getServicePhoto(slug)
   return <img src={image.image} alt={image.alt || title} loading="lazy" decoding="async" />
 }
 

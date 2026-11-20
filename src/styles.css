@@ -28,7 +28,7 @@ nav{display:flex;align-items:center;gap:26px}nav a:not(.plate){font:700 1.1rem v
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:20px;align-items:center}
 .hero-copy{max-width:760px;margin-left:-52px}.hero-copy h1,.hero-copy .lead{color:#fff}.hero-copy h1{max-width:760px}.hero-copy .lead{color:#d8e2f1}
 .hero-heading span{display:block;white-space:nowrap}
-.job-card-section{background:#f4f6fa}.job-card-section .tracker{width:min(760px,100%);min-height:0;margin:10px auto 0;padding:0;border-radius:0}.job-card-section .tracker .ticket{width:min(520px,100%);margin:0;transform:none;animation:none}
+.service-journey-section{background:#f4f6fa}.service-journey-section .tracker{width:min(760px,100%);min-height:0;margin:10px auto 0;padding:0;border-radius:0}
 .hero::after{content:'';position:absolute;left:0;right:0;bottom:36px;height:6px;background:repeating-linear-gradient(90deg,var(--y) 0 60px,transparent 60px 110px);animation:lane 2s linear infinite}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:6px 14px;border-radius:4px;font:500 .78rem var(--m);margin-bottom:22px}.pill i{width:9px;height:9px;border-radius:50%;background:#2ee66b;animation:pulse 1.6s infinite}

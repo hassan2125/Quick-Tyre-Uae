@@ -19,8 +19,7 @@ export default function Home() {
       </div>
     </div></section>
 
-    <section className="section job-card-section"><div className="wrap">
-      <SectionHead eyebrow="Live Service Status" title="Your technician is on the way" sub="Track the service from booking to completion." center />
+    <section className="section service-journey-section"><div className="wrap">
       <Tracker />
     </div></section>
 

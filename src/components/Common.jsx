@@ -25,7 +25,7 @@ export const PageHero = ({ eyebrow, title, sub, image, imageAlt }) => (
 export const ServiceCard = ({ s, i = 0 }) => (
   <Reveal delay={i * 70}>
     <Link to={`/services/${s.slug}`} className="card service-card">
-      <div className="service-visual"><ServiceIllustration slug={s.slug} title={s.title} /></div>
+      <div className="service-visual"><ServiceIllustration slug={s.slug} title={s.title} image={s.image} /></div>
       <div className="service-card-body"><h3>{s.title}</h3><p>{s.short}</p>
         <div className="card-foot"><b>From AED 150</b><span className="arrow">→</span></div>
       </div>
